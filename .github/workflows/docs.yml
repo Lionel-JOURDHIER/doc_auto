@@ -27,9 +27,12 @@ jobs:
       - name: Install dependencies
         run: uv sync --all-extras # Installe Sphinx et le thème RTD définis dans le fichier toml
 
-      - name: Build Sphinx Documentation
-        # On génère le HTML dans le dossier "public"
+      - name: Generate API skeleton
         run: uv run sphinx-apidoc -o docs/source app/
+
+      # 2. GÉNÉRER LE HTML
+      - name: Build Sphinx Documentation
+        run: uv run sphinx-build -b html docs/source public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
