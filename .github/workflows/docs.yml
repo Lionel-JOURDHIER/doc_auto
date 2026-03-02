@@ -32,7 +32,11 @@ jobs:
 
       # 2. GÉNÉRER LE HTML
       - name: Build Sphinx Documentation
-        run: uv run sphinx-build -b html docs/source public
+        run: |
+          mkdir -p public
+          # -n : mode "nitpicky" (signale toutes les petites erreurs)
+          # -v : mode verbeux (affiche ce que Sphinx fait)
+          uv run sphinx-build -nv -b html docs/source public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

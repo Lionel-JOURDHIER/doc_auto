@@ -24,14 +24,17 @@ Modules
 ===================
 
 Outils Mathématiques
+
 --------------------
 
-.. automodule:: app.modules.my_math
+.. automodule:: app.modules.my_maths
+
    :members:
    :undoc-members:
    :show-inheritance:
 
 Logique métier
+
 --------------
 
 .. automodule:: app.modules.modules
