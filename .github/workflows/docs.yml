@@ -29,7 +29,7 @@ jobs:
 
       - name: Build Sphinx Documentation
         # On génère le HTML dans le dossier "public"
-        run: uv run sphinx-build docs/source public
+        run: uv run sphinx-apidoc -o docs/source app/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
