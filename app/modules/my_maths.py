@@ -1,7 +1,9 @@
 """
 Ce module contient des fonctions mathématiques personnalisées.
 """
+
 import numpy as np
+
 
 def calculer_moyenne(data: list) -> float:
     r"""
@@ -19,5 +21,7 @@ def calculer_moyenne(data: list) -> float:
 
     Returns:
         float: La moyenne calculée.
+
+    .. [1] Auteur, *Titre de l'ouvrage*, Année de publication.
     """
     return np.mean(data)
